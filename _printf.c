@@ -33,6 +33,9 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
 			length += print_number(va_arg(args, int)), i += 2;
 
+		else if (format[i] == '%' && format[i + 1] == 'b')
+			length += print_binary(va_arg(args, unsigned int)), i += 2;
+
 		else
 			length += _putchar(format[i]), i++;
 	}
