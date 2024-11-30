@@ -36,6 +36,18 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i + 1] == 'b')
 			length += print_binary(va_arg(args, unsigned int)), i += 2;
 
+ 		else if (format[i] == '%' && format[i + 1] == 'u')
+            		length += print_unsigned(va_arg(args, unsigned int)), i += 2;
+
+        	else if (format[i] == '%' && format[i + 1] == 'o')
+            		length += print_octal(va_arg(args, unsigned int)), i += 2;
+
+        	else if (format[i] == '%' && format[i + 1] == 'x')
+            		length += print_hex_lower(va_arg(args, unsigned int)), i += 2;
+
+        	else if (format[i] == '%' && format[i + 1] == 'X')
+           		length += print_hex_upper(va_arg(args, unsigned int)), i += 2;
+
 		else
 			length += _putchar(format[i]), i++;
 	}
