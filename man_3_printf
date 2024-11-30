@@ -73,6 +73,6 @@ In example Code 2 printf("%d", 5, 6, 7, "hello"); will print 5, but the presence
 It's important to ensure that the number of format specifiers matches the number of arguments provided to avoid such issues.
 
 .SH AUTHORS
-Irada Nuraliyeva
+.B Irada Nuraliyeva
 .br
-Maryam Shakiliyeva
+.B Maryam Shakiliyeva
